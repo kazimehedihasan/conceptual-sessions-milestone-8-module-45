@@ -1,23 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
-const myCreatedRoute = createBrowserRouter([
-  {
-path: '/',
-element: <div>Home page</div>
-  },
-  {
-    path: '/about',
-    element: <div>About page</div>
-  },
-  {
-    path: '/profile',
-    element: <div>Profile page</div>
-  }
-])
-
+import { RouterProvider } from 'react-router-dom'
+import myCreatedRoute from './Router/Router'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -25,5 +10,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={myCreatedRoute}></RouterProvider>
   </React.StrictMode>,
 )
-
-//  27 dekha hoiche
