@@ -1,9 +1,10 @@
+import DashboarsDetilse from "../DashboarsDetilse/DashboarsDetilse";
 
 
 const Profile = () => {
     return (
         <div>
-            <div>Profile page</div>
+            <DashboarsDetilse></DashboarsDetilse>
         </div>
     );
 };

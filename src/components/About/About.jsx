@@ -7,9 +7,12 @@ const About = () => {
     return (
         <div>
             <div>About page</div>
-       {
-        products.map((product, idx) => <Products key={idx} product={product}></Products>)
+            <div className="grid grid-cols-3 px-16 py-4 gap-6">
+            {
+        products?.map((product, idx) => <Products key={idx} product={product}></Products>)
        }
+            </div>
+       
         </div>
     );
 };

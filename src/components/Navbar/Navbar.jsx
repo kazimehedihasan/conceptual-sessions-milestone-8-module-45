@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -12,15 +12,20 @@ const Navbar = () => {
             <nav>
                 <ul  className="flex gap-4 text-2xl">
                     <li>
-                        <Link to="/">Home</Link>
+                    <NavLink to="/" className={({isActive, isPending}) =>
+                        isPending ? "pending" : isActive? "text-red-500" : ""}>Home</NavLink>
+                    
                     </li>
                     <li>
-                        <Link to="/Products">Products</Link>   {/* About */}
-                      
+
+                    <NavLink to="/Products" className={({isActive, isPending}) =>
+                        isPending ? "pending" : isActive? "text-red-500" : ""}>Products</NavLink>  {/* About */}
+
                     </li>
-                    <li>
-                        <Link to="/profile">Profile</Link>
-                    </li>
+                    
+                        <NavLink to="/profile" className={({isActive, isPending}) =>
+                        isPending ? "pending" : isActive? "text-red-500" : ""}>Profile</NavLink>
+
                 </ul>
             </nav>
         </div>
